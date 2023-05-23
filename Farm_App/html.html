@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <div class="f-group">
+            <label for="">Catagory </label>
+            <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                <option value="" selected disabled>--select catagory--</option>
+                <option value="fruits">Fruits/फळे</option>
+                <option value="vagitables">Vagitables/भाजीपाला</option>
+                <option value="grains">Grains/कडधान्य</option>
+                <option value="milk">Milk/दुग्धजन्य पदार्थ</option>
+                <option value="eggs">Eggs/अंडी</option>
+            </select>
+        </div>
+        <div class="f-group">
+            <label for="">sub catagory</label>
+            <select name="slct2" id="slct2">--sub catagory--</select>
+        </div>
+        <script>
+            function populate(s1,s2)
+            {
+                var s1=document.getElementById(s1);
+                var s2=document.getElementById(s2);
+
+                s2.innerHTML="";
+                if(s1.value=='fruits')
+                {
+                    var optionArray=[
+                        'almond|Almond/बदाम',
+'apricot|Apricot/जर्दाळू',
+'avocado|Avocado/एवोकाडो',
+'banana|Banana/केली',
+'berry|Berry/करवंद',
+'black currant|Black Currant/बेदाणा',
+'blackberry|Blackberry/जांभुळ',
+'blueberry|Blueberry/ब्ल्यूबेरी',
+'cashew|Cashew/काजू',
+'cherry|Cherry/चेरी',
+'coconut|Coconut/नारळ',
+'cucumber|Cucumber/काकडी',
+'custard apple|Custard Apple/सिताफळ',
+'dates|Dates/खजूर',
+'fig|Fig/अंजीर',
+'gooseberry|Gooseberry/आवळा',
+'grapefruit|Grapefruit/ईडलिंबु',
+'grapes|Grapes/द्राक्षे',
+'guava|Guava/पेरू',
+'jackfruit|Jackfruit/फनस',
+'jujube|Jujube/बोर',
+'kiwi|Kiwi/किवी',
+'lemon|Lemon/लिंबू',
+'lychee|Lychee/लिची',
+'mango|Mango/आंबा',
+'mulberry|Mulberry/शेंगदाणे',
+'muskmelon|Muskmelon/खरबूज',
+'naseberry|Naseberry/चिक्कु',
+'olive|Olive/ऑलिव्ह',
+'orange|Orange/संत्रा',
+'papaya|Papaya/पपई',
+'peach|Peach/पीच',
+'pear|Pear/नासपती',
+'persimmon|Persimmon/तिंदुक फळ',
+'pineapple|Pineapple/अननस',
+'plum|Plum/आलुबुखार',
+'pomegranate|Pomegranate/डाळिंब',
+'prickly pear|Prickly Pear/काटेरी पेर',
+'quince|Quince/त्या फळाचे झाड',
+'raisins|Raisins/मनुका',
+'raspberry|Raspberry/काळा आंचू',
+'startfruit|Startfruit/स्टार फळ',
+'strawberry|Strawberry/स्ट्राबेरी',
+'sugar cane|Sugar Cane/ऊस',
+'sweet lime|Sweet Lime/मोसंबी',
+'tamarind|Tamarind/चिंच',
+'walnut|Walnut/अक्रोड',
+'water chestnut|Water Chestnut/शिंगाडा',
+'watermelon|Watermelon/कलिंगड',
+'wood apple|Wood Apple/कवट'
+                                    ];
+                }
+                else if(s1.value=='vagitables')
+                {
+                    var optionArray=[
+'bitter gourd|Bitter Gourd/कारले',
+'coriander leaf|Coriander Leaf/कोथिंबीर',
+'cauliflower|Cauliflower/फुलकोबी',
+'peas|Peas/मटार',
+'apple gourd|Apple Gourd/सफरचंद',
+'beetroot|Beetroot/बीटरूट',
+'beetroot|Beetroot/बीट',
+'bell pepper|Bell Pepper/भोपळी मिरची',
+'bitter gourd|Bitter Gourd/कारले',
+'black pepper|Black Pepper/काळी मिरी',
+'bottle gourd|Bottle Gourd/दुधीभोपळा',
+'brinjal|Brinjal/वांगे',
+'cabbage|Cabbage/कोबी',
+'capsicum|Capsicum/शिमला मिर्ची',
+'carrot|Carrot/गाजर',
+'cauliflower|Cauliflower/फुलकोबी',
+'chilli|Chilli/मिरची',
+'coriander|Coriander/कोथिंबीर',
+'cucumber|Cucumber/काकडी',
+'drumstick|Drumstick/शेवगा',
+'garlic|Garlic/लसूण',
+'ginger|Ginger/आले',
+'green bean|Green bean/हिरवे बीन',
+'green onion|Green onion/हिरवा कांदा',
+'ivy gourd|Ivy gourd/तोंडली',
+'jackfruit|Jackfruit/फणस',
+'ladys finger|Ladys finger/भेंडी',
+'mushroom|Mushroom/मशरूम',
+'onion|Onion/कांदा',
+'peas|Peas/मटार',
+'potato|Potato/बटाटा',
+'pumpkin|Pumpkin/भोपळा',
+'raddish|Raddish/मुळा',
+'redchillies|Redchillies/लाल मिरची',
+'ridged gourd|Ridged gourd/दोडका',
+'snake gourd|Snake gourd/साप लौकी',
+'spinach|Spinach/पालक',
+'sweet potato|Sweet Potato/रताळे',
+'tomato|Tomato/टोमॅटो',
+'zucchini|Zucchini/झुचिनी'
+];
+                }
+                else if(s1.value=='grains')
+                {
+                    var optionArray=[
+'barley|Barley/बार्ली',
+'barley|Barley/सातू',
+'beans|Beans/सोयाबीनचे',
+'bengal gram|Bengal Gram/शेंगदाणे',
+'black gram|Black gram/उडीद',
+'black-eyed beans/ black- eyed pea/ goat pea|Black-eyed beans/ black- eyed pea/ goat pea/चवळी',
+'finger miller|Finger miller/नाचणी',
+'gram /yellow gram/chickpeas|Gram /yellow gram/chickpeas/हरभरा, चना',
+'green gram|Green gram/मुग',
+'green peas|Green peas/वाटाणा/मटार',
+'kidney beans|Kidney beans/राजमा/ लाल घेवडा',
+'lentil|Lentil/मसूर',
+'maize/corn|Maize/corn/मका',
+'millet|Millet/बाजरी',
+'paddy|Paddy/भात',
+'pea|Pea/वाटाणे',
+'peanuts|Peanuts/शेंगदाणे',
+'pearl millet|Pearl millet/बाजरी',
+'pigeon pea|Pigeon pea/तुर',
+'ragi|Ragi/यीस्ट',
+'rice|Rice/तांदूळ',
+'sorghum / jowar/  great millet/ milo|Sorghum / jowar/  great millet/ milo/ज्वारी',
+'sorghum|Sorghum/ज्वारी',
+'soyabean|Soyabean/सोयाबीन',
+'split black gram|Split black gram/उडीदडाळ',
+'split chickpeas |Split chickpeas /हरभराडाळ, चनाडाळ',
+'split green gram|Split green gram/मुगडाळ',
+'split lentil|Split lentil/मसूरडाळ',
+'split pigeon pea|Split pigeon pea/तुरडाळ',
+'wheat|Wheat/गहू'
+                    ];
+                }
+                else if(s1.value=='milk')
+                {
+                    var optionArray=[
+                        'curd|Curd/दही',
+                        'milk|Milk/दूध',
+                        'buttermilk|Buttermilk/ताक',
+                        'ghee|Cow Ghee/गाईचे तूप'
+                    ];
+                }
+                else if(s1.value=='eggs')
+                {
+                    var optionArray=['chicken eggs|Chicken eggs/कोंबडीची अंडी'];
+                }
+                for(var option in optionArray)
+                {
+                    var pair=optionArray[option].split("|");
+                    var newoption=document.createElement("option");
+                    newoption.value=pair[0];
+                    newoption.innerHTML=pair[1];
+                    s2.options.add(newoption);
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
